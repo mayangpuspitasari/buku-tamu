@@ -142,6 +142,50 @@ $keseluruhan = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS jum
 
 
     <!-- DataTables Example -->
+    <div class="card shadow mb-4">
+    <div class="card-header py-3 bg-dark text-white">
+        <h6 class="m-0 font-weight-bold">Data Pengunjung Hari Ini [<?= date('d-m-Y'); ?>]</h6>
+    </div>
+
+    <div class="card-body bg-light">
+        <!-- Search Form -->
+
+        <!-- Table -->
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th>No</th>
+                        <th>Tanggal</th>
+                        <th>Nama Pengunjung</th>
+                        <th>Alamat</th>
+                        <th>Keperluan</th>
+                        <th>Instansi</th>
+                        <th>No. HP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $tgl = date('Y-m-d');
+                    $tampil = mysqli_query($koneksi, "SELECT * FROM tbl_tamu WHERE tanggal LIKE '%$tgl%' ORDER BY id DESC");
+                    $no = 1;
+                    while ($data = mysqli_fetch_array($tampil)) {
+                    ?>
+                        <tr>
+                            <td><?= $no++ ?></td>
+                            <td><?= $data['tanggal'] ?></td>
+                            <td><?= $data['nama'] ?></td>
+                            <td><?= $data['alamat'] ?></td>
+                            <td><?= $data['keperluan'] ?></td>
+                            <td><?= $data['instansi'] ?></td>
+                            <td><?= $data['nohp'] ?></td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
 
 </div>
