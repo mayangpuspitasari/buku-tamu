@@ -39,7 +39,7 @@ $bulan_ini = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS jumla
 $keseluruhan = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS jumlah FROM tbl_tamu"))['jumlah'];
 ?>
 
-<div class="container-fluid">
+<div class=" main container-fluid">
     <div class="row justify-content-center">
         <!-- Statistik Pengunjung -->
         <div class="col-lg-12 mb-3">
