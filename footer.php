@@ -1,4 +1,33 @@
-</div>
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p style="margin: 0; font-weight: bold; color: #ccc;">© 2024 Data Pengunjung. Semua Hak Dilindungi.</p>
+        <p>
+            <a href="#" style="color: #bb86fc; text-decoration: none; font-weight: bold;">Tentang Kami</a> |
+            <a href="#" style="color: #bb86fc; text-decoration: none; font-weight: bold;">Kontak</a> |
+            <a href="#" style="color: #bb86fc; text-decoration: none; font-weight: bold;">Privasi</a>
+        </p>
+    </div>
+</footer>
+
+<!-- Custom Styles untuk Footer -->
+<style>
+    footer {
+        background-color: #1e1e1e;
+        color: #ccc;
+        padding: 10px 0;
+    }
+
+    .footer a {
+        color: #bb86fc;
+        transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+        color: #3700b3;
+    }
+</style>
+
 
 <!-- Bootstrap core JavaScript-->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
