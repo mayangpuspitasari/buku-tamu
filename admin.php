@@ -100,9 +100,9 @@ $keseluruhan = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS jum
 <div class="modal fade" id="inputDataModal" tabindex="-1" role="dialog" aria-labelledby="inputDataModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="inputDataModalLabel">Input Data Pengunjung</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="inputDataModalLabel"><i class="fas fa-user-plus"></i> Input Data Pengunjung</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -110,29 +110,39 @@ $keseluruhan = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS jum
                 <!-- Form Input Data -->
                 <form class="user" method="POST" action="">
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-user" name="nama" placeholder="Nama Pengunjung" required>
+                        <label for="nama" class="font-weight-bold">Nama Pengunjung</label>
+                        <input type="text" class="form-control form-control-user" id="nama" name="nama" placeholder="Masukkan Nama Pengunjung" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-user" name="alamat" placeholder="Alamat Pengunjung" required>
+                        <label for="alamat" class="font-weight-bold">Alamat</label>
+                        <input type="text" class="form-control form-control-user" id="alamat" name="alamat" placeholder="Masukkan Alamat Pengunjung" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-user" name="keperluan" placeholder="Keperluan Pengunjung" required>
+                        <label for="keperluan" class="font-weight-bold">Keperluan</label>
+                        <input type="text" class="form-control form-control-user" id="keperluan" name="keperluan" placeholder="Masukkan Keperluan Pengunjung" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-user" name="instansi" placeholder="Asal Instansi" required>
+                        <label for="instansi" class="font-weight-bold">Asal Instansi</label>
+                        <input type="text" class="form-control form-control-user" id="instansi" name="instansi" placeholder="Masukkan Asal Instansi" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-user" name="nohp" placeholder="No.HP Pengunjung" required>
+                        <label for="nohp" class="font-weight-bold">No. HP</label>
+                        <input type="tel" class="form-control form-control-user" id="nohp" name="nohp" placeholder="Masukkan No. HP Pengunjung" pattern="[0-9]+" required>
                     </div>
-                    <button type="submit" name="bsimpan" class="btn btn-primary btn-user btn-block">Simpan Data</button>
+                    <button type="submit" name="bsimpan" class="btn btn-primary btn-user btn-block mt-3 shadow">
+                        <i class="fas fa-save"></i> Simpan Data
+                    </button>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <i class="fas fa-times"></i> Tutup
+                </button>
             </div>
         </div>
     </div>
 </div>
+
 
 
     <!-- DataTables Example -->
